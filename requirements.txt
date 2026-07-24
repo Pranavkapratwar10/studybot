@@ -1,0 +1,11 @@
+streamlit
+chromadb
+sentence-transformers
+groq
+bcrypt
+python-docx
+pypdf
+pdfplumber
+pandas
+plotly
+pypdfium2
