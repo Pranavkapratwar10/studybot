@@ -9,3 +9,6 @@ pdfplumber
 pandas
 plotly
 pypdfium2
+langchain-text-splitters
+langchain-community
+langchain
