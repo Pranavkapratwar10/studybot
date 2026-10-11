@@ -19,8 +19,8 @@ pipeline {
             steps {
                 echo '🐳 Building Docker image...'
                 script {
-                    bat "docker build -t ${DOCKER_IMAGE}:${BUILD_TAG} ."
-                    bat "docker build -t ${DOCKER_IMAGE}:latest ."
+                    sh "docker build -t ${DOCKER_IMAGE}:${BUILD_TAG} ."
+                    sh "docker build -t ${DOCKER_IMAGE}:latest ."
                 }
             }
         }
@@ -29,7 +29,7 @@ pipeline {
             steps {
                 echo '🧪 Testing Docker image...'
                 script {
-                    bat "docker run --rm ${DOCKER_IMAGE}:${BUILD_TAG} python --version"
+                    sh "docker run --rm ${DOCKER_IMAGE}:${BUILD_TAG} python --version"
                 }
             }
         }
@@ -38,7 +38,7 @@ pipeline {
             steps {
                 echo '🏷️ Image ready for deployment!'
                 script {
-                    bat "docker images ${DOCKER_IMAGE}"
+                    sh "docker images ${DOCKER_IMAGE}"
                 }
             }
         }
