@@ -10,9 +10,10 @@
 
 **If you're getting API errors**, the Groq API key needs to be updated. Follow the quick fix:
 
-1. **Get FREE API key**: Visit [console.groq.com](https://console.groq.com)
-2. **Run setup**: `python setup_api_key.py` (interactive helper)
-3. **Or update manually**: Edit `.streamlit/secrets.toml`
+1. **live link ** : https://studybot-ydptj5rbztmkqhork65ecm.streamlit.app
+2.  **Get FREE API key**: Visit [console.groq.com](https://console.groq.com)
+3.  **Run setup**: `python setup_api_key.py` (interactive helper)
+4. **Or update manually**: Edit `.streamlit/secrets.toml`
 4. **Test it**: `python test_groq.py`
 
 See [QUICK_FIX.md](QUICK_FIX.md) for detailed instructions.
