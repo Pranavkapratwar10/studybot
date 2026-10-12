@@ -17,15 +17,16 @@ pipeline {
         
         stage('Validate Code') {
             steps {
-                echo '� Validating Python syntax...'
+                echo '🔍 Validating required files exist...'
                 script {
                     sh '''
-                        python3 --version
                         echo "Checking if main files exist..."
                         test -f app.py && echo "✅ app.py found" || exit 1
                         test -f requirements.txt && echo "✅ requirements.txt found" || exit 1
+                        test -f Jenkinsfile && echo "✅ Jenkinsfile found" || exit 1
                     '''
                 }
+                echo '✅ All required files present!'
             }
         }
         
