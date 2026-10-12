@@ -35,5 +35,5 @@ ENV STREAMLIT_SERVER_ADDRESS=0.0.0.0
 # Health check (will use PORT env var)
 HEALTHCHECK CMD curl --fail http://localhost:${PORT:-8501}/_stcore/health
 
-# Run Streamlit app (PORT will be set by Render)
-CMD streamlit run app.py --server.port=${PORT:-8501} --server.address=0.0.0.0
+# Run Streamlit app (use shell form to expand PORT variable)
+CMD sh -c "streamlit run app.py --server.port=${PORT:-10000} --server.address=0.0.0.0"
